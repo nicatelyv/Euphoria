@@ -45,7 +45,6 @@ form {
 
 .submit button {
   width: 170px !important;
-  background-color: #8a33fd !important;
   color: white;
   margin-bottom: 15px;
 }
@@ -127,11 +126,14 @@ form p,
 }
 
 .submit span {
-  font: 400 .9em "Open Sans";
+  font: 400 0.9em "Open Sans";
 }
 
-.submit span>a {
+.submit span > a {
   color: black;
+}
+input[type="checkbox"] {
+  accent-color: gray;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -180,4 +182,3 @@ form p,
     margin-right: 10px;
   }
 }
-
