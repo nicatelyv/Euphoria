@@ -46,7 +46,6 @@ nav {
         }
     }
 
-
     .list {
         display: flex;
         align-items: center;
@@ -71,16 +70,13 @@ nav {
             font-size: 14px;
             padding-left: 20px;
             padding-right: 20px;
-
         }
-
-
     }
 }
 
 @media only screen and (max-width:890px) {
     nav {
-        &>input {
+        .input {
             display: none;
         }
     }
@@ -111,6 +107,9 @@ nav {
             &>a {
                 display: none;
             }
+        }
+        .input{
+            display: none;
         }
     }
 }

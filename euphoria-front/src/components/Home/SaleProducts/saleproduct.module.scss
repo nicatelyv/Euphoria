@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mobile2 {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 998px) {
+        @content;
+    }
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.saleproduct {
+    width: 100%;
+    min-height: 60vh;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+        min-height: 40vh;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    @include mobile {
+        min-height: 25vh;
+    }
+
+    .container {
+        width: 80%;
+        min-height: 45vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        border-radius: 20px;
+
+        @include tablet {
+            min-height: 30vh;
+        }
+
+        @include mobile {
+            width: 95%;
+            min-height: 20vh;
+        }
+
+        .product {
+            width: 48%;
+            min-height: 300px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: self-start;
+            padding-left: 30px !important;
+            gap: 10px;
+
+            @include tablet {
+                min-height: 230px !important;
+            }
+
+            @include mobile {
+                min-height: 130px !important;
+                gap: 5px;
+            }
+
+            @include mobile2 {
+                padding-left: 10px !important;
+            }
+
+            &>h4 {
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+
+                @include mobile {
+                    font-size: 14px;
+                    font-weight: 100;
+                }
+
+                @include mobile2 {
+                    display: none;
+                }
+            }
+
+            &>h2 {
+                color: white;
+                font-size: 30px;
+                width: 50%;
+
+                @include tablet {
+                    width: 70%;
+                    font-size: 24px;
+                }
+
+                @include mobile {
+                    font-size: 16px;
+                    width: 100%;
+                }
+
+                @include mobile2 {
+                    font-weight: 400;
+                }
+            }
+
+            &>h5 {
+                color: white;
+                font-weight: 300;
+                font-size: 16px;
+
+                @include mobile {
+                    font-size: 14px;
+                }
+
+                @include mobile2 {
+                    display: none;
+                }
+            }
+
+            &>a {
+                margin-top: 30px;
+                color: white;
+                font-size: 20px;
+                border-bottom: 1px solid white;
+
+                @include tablet {
+                    margin-top: 10px;
+                }
+
+                @include mobile {
+                    font-size: 14px;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}

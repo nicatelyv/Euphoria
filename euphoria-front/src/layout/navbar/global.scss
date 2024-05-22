@@ -1,4 +1,10 @@
-.active {
-    background-color: #8A33FD !important;
-    color: white !important;
+nav {
+    .active {
+        background-color: #8A33FD !important;
+        color: white !important;
+    }
+
+    .active:nth-child(1) {
+        background-color: inherit !important;
+    }
 }

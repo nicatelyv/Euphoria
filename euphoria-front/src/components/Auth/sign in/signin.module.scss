@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.signin {
+    width: 100%;
+    min-height: 90vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s;
+
+    &>img {
+        width: 600px;
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .container {
+        padding: 50px;
+        width: 100%;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        transition: .5s;
+
+        &>h2 {
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 33px;
+            letter-spacing: 2%;
+            margin-bottom: 50px;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            width: 80%;
+            text-align: start;
+            transition: .5s;
+        }
+
+        &>button {
+            width: 80%;
+            height: 50px;
+            background-color: white;
+            color: black;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            border-radius: 10px;
+            border: 1px solid gray;
+            cursor: pointer;
+            transition: .5s;
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-size: 14px;
+
+            &>img {
+                width: 30px;
+            }
+        }
+
+        &>button:hover {
+            letter-spacing: 1.1px;
+            transition: .5s;
+        }
+
+        .line {
+            margin-top: 50px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 80%;
+            transition: .5s;
+
+            &>span {
+                width: 45%;
+                border: 1px solid gray;
+            }
+        }
+
+        .input {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-top: 10px;
+            transition: .5s;
+
+            &>p {
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+                padding-left: 5px;
+                padding-right: 5px;
+                font-size: 14px;
+            }
+
+            &>div>p {
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+                padding-left: 5px;
+                padding-right: 5px;
+                font-size: 14px;
+            }
+
+            &>input {
+                width: 100%;
+                height: 50px;
+                border: 1px solid gray;
+                border-radius: 10px;
+                padding-left: 20px;
+                font-size: 16px;
+                outline-color: #8a33fd;
+                padding-right: 20px;
+            }
+
+            a {
+                padding-right: 5px;
+                text-decoration: underline;
+                color: #3C4242;
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-size: 14px;
+            }
+        }
+
+        .end {
+            width: 80%;
+            min-height: 100px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            transition: .5s;
+
+            &>button {
+                width: 170px;
+                height: 50px;
+                background-color: #8A33FD;
+                color: white;
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 14px;
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+            }
+
+            &>p {
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-size: 14px;
+
+                &>a {
+                    text-decoration: underline;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:950px) {
+    .signin {
+        flex-direction: column-reverse;
+        transition: .5s;
+
+        &>img {
+            width: 100%;
+            transition: .5s;
+        }
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .signin {
+        .container {
+            padding: 30px;
+            transition: .5s;
+
+            &>h2 {
+                width: 100%;
+                margin-bottom: 20px;
+                transition: .5s;
+            }
+
+            &>button {
+                width: 100%;
+                transition: .5s;
+            }
+
+            .line {
+                width: 100%;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                transition: .5s;
+            }
+
+            .input {
+                width: 100%;
+                transition: .5s;
+            }
+
+            .end {
+                width: 100%;
+                transition: .5s;
+            }
+        }
+    }
+}

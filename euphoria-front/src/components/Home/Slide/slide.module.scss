@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mobile2 {
+    @media (max-width: 300px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 998px) {
+        @content;
+    }
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.each_slide_effect>.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-size: cover;
+    width: 100%;
+    height: 90vh;
+    margin-top: 10vh;
+    transition: .5s;
+    padding-left: 150px;
+
+    @include tablet {
+        padding-left: 70px;
+    }
+
+    @include tablet {
+        height: 50vh;
+    }
+
+    @include mobile {
+        height: 30vh;
+        padding-left: 50px;
+    }
+
+    .text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+
+        &>h3 {
+            font-size: 32px;
+            color: white;
+
+            @include tablet {
+                font-size: 24px;
+            }
+
+            @include mobile {
+                font-size: 18px;
+            }
+
+            @include mobile2 {
+                font-size: 14px;
+            }
+        }
+
+
+        &>h2 {
+            font-size: 78px;
+            width: 50%;
+            color: white;
+
+            @include tablet {
+                font-size: 55px !important;
+                width: 60%;
+            }
+
+            @include mobile {
+                width: 70%;
+                font-size: 24px !important;
+            }
+
+            @include mobile2 {
+                font-size: 18px;
+                width: 100%;
+                font-weight: 400;
+            }
+        }
+
+        &>a {
+            width: 250px;
+            height: 60px;
+            background-color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 600;
+            color: black;
+            margin-top: 30px;
+
+            @include tablet {
+                width: 170px;
+                height: 50px;
+                font-size: 20px;
+                margin-top: 20px;
+            }
+
+            @include mobile {
+                width: 100px;
+                height: 35px;
+                font-size: 14px !important;
+                font-weight: 400;
+                margin-top: 10px;
+            }
+
+            @include mobile2 {
+                font-size: 12px !important;
+                width: 80px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.slideShow {
+    width: 100%;
+
+    button {
+        width: 50px !important;
+        height: 100% !important;
+        border-radius: 0 !important;
+        background-color: inherit !important;
+    }
+
+    button:hover,
+    :focus {
+        background-color: inherit;
+    }
+
+    @include tablet {
+        button {
+            display: none;
+        }
+    }
+}
