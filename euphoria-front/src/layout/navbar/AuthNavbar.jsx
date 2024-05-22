@@ -1,19 +1,16 @@
 import React from 'react'
-import navStyle from "./navbar.module.scss"
+import navStyle from "./authnavbar.module.scss"
 import Languageoption from "../../components/language dropdown/language-dropdown"
-// Dil deyisimi ucun
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
-//
 import { NavLink } from "react-router-dom"
 import "./global.scss";
+
 function AuthNavbar() {
-    // Dil deyisimi ucun
     const { t } = useTranslation();
     const handleClick = (e) => {
         i18next.changeLanguage(e.target.value)
     }
-    //
 
     return (
         <nav>

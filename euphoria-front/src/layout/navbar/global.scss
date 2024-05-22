@@ -8,3 +8,11 @@ nav {
         background-color: inherit !important;
     }
 }
+
+.nav {
+    .listLeft {
+        .active {
+            font-weight: 600 !important;
+        }
+    }
+}
