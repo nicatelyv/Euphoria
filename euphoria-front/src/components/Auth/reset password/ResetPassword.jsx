@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 
 const ResetPassword = () => {
  const { t } = useTranslation();
- console.log(t);
   return (
     <div className={resetPasswordStyle.resetPassword}>
         <img src={respassimg} alt="resetpswimg" />

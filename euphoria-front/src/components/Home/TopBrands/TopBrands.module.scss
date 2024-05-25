@@ -1,0 +1,137 @@
+.topBrands {
+  width: 80%;
+  min-height: 40vh;
+  background-color: #3C4242;
+  margin: 30px auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  &>.topBrandsText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    &>h1 {
+      font-weight: 800;
+      color: white;
+      font-size: 40px;
+      margin-top: 20px;
+    }
+
+    &>p {
+      color: white;
+      font-size: 22px;
+    }
+  }
+
+  &>.topBrandsImg {
+    width: 90%;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .topBrands {
+    &>.topBrandsImg {
+      width: 90%;
+      gap: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .topBrands {
+    &>.topBrandsImg {
+      width: 90%;
+      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+
+      &>img {
+        height: 13vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 558px) {
+  .topBrands {
+    width: 90%;
+
+    &>.topBrandsText {
+      &>h1 {
+        font-size: 30px;
+      }
+
+      &>p {
+        font-size: 18px;
+      }
+    }
+
+    &>.topBrandsImg {
+      width: 90%;
+      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 40px;
+
+      &>img {
+        height: 13vh;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .topBrands {
+    &>.topBrandsText {
+      &>h1 {
+        font-size: 25px;
+      }
+
+      &>p {
+        font-size: 16px;
+      }
+    }
+
+    &>.topBrandsImg {
+      width: 90%;
+      gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      &>img {
+        height: 13vh;
+      }
+    }
+  }
+}

@@ -6,46 +6,48 @@ import footerigicon from '../../../public/img/footerigicon.png'
 import footertwicon from '../../../public/img/footertwicon.png'
 import footerinicon from '../../../public/img/footerinicon.png'
 import footericon from '../../../public/img/footericon.png'
+import { useTranslation } from 'react-i18next'
 
 function Footer() {
+    const { t } = useTranslation();
     return (
         <div className={footerStyle.footer}>
            <div className={footerStyle.footerInside}>
                 <div className={footerStyle.gridColumns}>
-                    <h2>Need Help</h2>
+                    <h2>{t("Need Help")}</h2>
                     <ul>
-                        <li>Contact Us</li>
-                        <li>Track Order</li>
-                        <li>Returns & Refunds</li>
-                        <li>FAQ`s</li>
-                        <li>Career</li>
+                        <li>{t("Contact Us")}</li>
+                        <li>{t("Track Order")}</li>
+                        <li>{t("Returns & Refunds")}</li>
+                        <li>{t("FAQ`s")}</li>
+                        <li>{t("Career")}</li>
                     </ul>
                 </div>
                 <div className={footerStyle.gridColumns}>
-                    <h2>Company</h2>
+                    <h2>{t("Company")}</h2>
                     <ul>
-                        <li>About Us</li>
-                        <li>euphoria Blog</li>
-                        <li>euphoriastan</li>
-                        <li>Collaboration</li>
-                        <li>Media</li>
+                        <li>{t("About Us")}</li>
+                        <li>{t("euphoria Blog")}</li>
+                        <li>{t("euphoriastan")}</li>
+                        <li>{t("Collaboration")}</li>
+                        <li>{t("Media")}</li>
                     </ul>
                 </div>
                 <div className={footerStyle.gridColumns}>
-                    <h2>More Info</h2>
+                    <h2>{t("More Info")}</h2>
                     <ul>
-                        <li>Term and Conditions</li>
-                        <li>Privacy Policy</li>
-                        <li>Shipping Policy</li>
-                        <li>Sitemap</li>
+                        <li>{t("Term and Conditions")}</li>
+                        <li>{t("Privacy Policy")}</li>
+                        <li>{t("Shipping Policy")}</li>
+                        <li>{t("Sitemap")}</li>
                     </ul>
                 </div>
                 <div className={footerStyle.gridColumns}>
-                    <h2>Location</h2>
+                    <h2>{t("Location")}</h2>
                     <ul>
                         <li>support@euphoria.in</li>
-                        <li>Eklingpura Chouraha, Ahmedabad Main Road</li>
-                        <li>(NH 8- Near Mahadev Hotel) Udaipur, India- 313002</li>
+                        <li>{t("Eklingpura Chouraha, Ahmedabad Main Road")}</li>
+                        <li>{t("(NH 8- Near Mahadev Hotel) Udaipur, India- 313002")}</li>
                     </ul>
                 </div>
            </div>
@@ -57,7 +59,7 @@ function Footer() {
                <img src={footerinicon} alt="footerinicon" />
             </div>
             <div className={footerStyle.socials2}>
-                <h3>Downlod The App</h3>
+                <h3>{t("Downlod The App")}</h3>
                 <div>
                    <img src={footergp} alt="google play" />
                    <img src={footeras} alt="app store" />
@@ -65,11 +67,11 @@ function Footer() {
             </div>
            </div>
             <div className={footerStyle.categories}>
-                <span>Popular Categories</span>
+                <span>{t("Popular Categories")}</span>
                 <img src={footericon} alt="footericon" />
             </div>
             <div className={footerStyle.copyright}>
-                <p>Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.</p>
+                <p>{t("Copyright © 2023 Euphoria Folks Pvt Ltd. All rights reserved.")}</p>
             </div>
         </div>
     )

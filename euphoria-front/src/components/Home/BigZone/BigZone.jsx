@@ -67,7 +67,7 @@ function BigZone() {
           </div>
         </div>
       </div>
-      <div className={bigzoneStyle.third}>
+      {/* <div className={bigzoneStyle.third}>
         <div className={bigzoneStyle.bigzone6}>
           <div className={bigzoneStyle.bigzone6Text}>
             <h4>WE MADE YOUR EVERYDAY FASHION BETTER!</h4>
@@ -79,7 +79,7 @@ function BigZone() {
           </div>
         </div>
         <div className={bigzoneStyle.bigzone7}></div>
-      </div>
+      </div> */}
     </div>
   );
 }
