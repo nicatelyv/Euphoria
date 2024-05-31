@@ -8,6 +8,7 @@ import HomeNavbar from "../../layout/navbar/HomeNavbar";
 import BigZone from "../../components/Home/BigZone/BigZone";
 import CategoriesForMen from "../../components/Home/CategoriesForMen/CategoriesForMen";
 import TopBrands from "../../components/Home/TopBrands/TopBrands";
+import Woman from "../../components/Home/Woman/Woman";
 
 export const Home = () => {
   return (
@@ -17,8 +18,9 @@ export const Home = () => {
       <SaleProducts />
       <NewArrival />
       <BigZone />
-      <FashionSection/>
+      <FashionSection />
       <CategoriesForMen />
+      <Woman />
       <TopBrands />
       <Footer />
     </>

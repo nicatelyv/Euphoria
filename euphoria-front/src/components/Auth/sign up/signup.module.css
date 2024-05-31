@@ -33,6 +33,7 @@ form {
   align-items: center;
   background-color: white;
   transition: 0.5s;
+  color: black;
 }
 
 .container button,
@@ -129,9 +130,10 @@ form p,
   font: 400 0.9em "Open Sans";
 }
 
-.submit span > a {
+.submit span>a {
   color: black;
 }
+
 input[type="checkbox"] {
   accent-color: gray;
 }

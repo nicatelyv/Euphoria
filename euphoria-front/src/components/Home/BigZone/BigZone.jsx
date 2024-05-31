@@ -1,7 +1,6 @@
 import React from "react";
 import bigzoneStyle from "./bigzone.module.css";
 import { IoIosArrowRoundDown } from "react-icons/io";
-// import fontStyle from "../font/font.css";
 
 function BigZone() {
   return (

@@ -9,63 +9,69 @@ import { GoPerson } from "react-icons/go";
 import { BiCart } from "react-icons/bi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { CgMenuMotion } from "react-icons/cg";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 function HomeNavbar() {
   const { t } = useTranslation();
   const handleClick = (e) => {
     i18next.changeLanguage(e.target.value);
   };
-  const [menu, setMenu] = useState(true);
+  const [menu, setMenu] = useState(false);
+
   return (
-    <>
-      <div className={navhomeStyle.border}>
-        <nav className={navhomeStyle.nav}>
-          <NavLink to={"/"}>
-            <img src="/svg/logo.svg" />
-          </NavLink>
-          {menu ? (
-            <RxHamburgerMenu
-              onClick={() => {
-                setMenu(!menu);
-              }}
-              className={navhomeStyle.menu}
-            />
-          ) : (
-            <CgMenuMotion
-              onClick={() => {
-                setMenu(!menu);
-              }}
-              className={navhomeStyle.menu}
-            />
-          )}
-          <div className={navhomeStyle.resp}>
-            <ul className={navhomeStyle.list}>
+    <div className={navhomeStyle.border}>
+      <nav className={navhomeStyle.nav}>
+        <NavLink to={"/"}>
+          <img src="/svg/logo.svg" alt="Logo" />
+        </NavLink>
+        <div className={navhomeStyle.menu} onClick={() => setMenu(!menu)}>
+          {menu ? <CgMenuMotion /> : <RxHamburgerMenu />}
+        </div>
+        <div
+          className={`${navhomeStyle.resp} ${menu ? navhomeStyle.show : ""}`}
+        >
+          <ul className={navhomeStyle.list}>
+            <li>
               <NavLink to={"/shop"}>{t("Shop")}</NavLink>
+            </li>
+            <li>
               <NavLink to={"/women"}>{t("Women")}</NavLink>
+            </li>
+            <li>
               <NavLink to={"/men"}>{t("Men")}</NavLink>
+            </li>
+            <li>
               <NavLink to={"/combos"}>{t("Combos")}</NavLink>
+            </li>
+            <li>
               <NavLink to={"/joggers"}>{t("Joggers")}</NavLink>
-            </ul>
-            <div className={navhomeStyle.input}>
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder={t("Search")} />
-            </div>
-            <Languageoption onChange={(e) => handleClick(e)} />
-            <div className={navhomeStyle.elements}>
-              <div className={navhomeStyle.elem}>
+            </li>
+          </ul>
+          <div className={navhomeStyle.input}>
+            <FaMagnifyingGlass style={{ color: "gray" }} />
+            <input type="text" placeholder={t("Search")} />
+          </div>
+          <Languageoption onChange={(e) => handleClick(e)} />
+          <div className={navhomeStyle.elements}>
+            <div className={navhomeStyle.elem}>
+              <NavLink to={'/wishlist'}>
                 <MdFavoriteBorder />
-              </div>
-              <div className={navhomeStyle.elem}>
+              </NavLink>
+            </div>
+            <div className={navhomeStyle.elem}>
+              <NavLink to={'/auth/sign-in'}>
                 <GoPerson />
-              </div>
-              <div className={navhomeStyle.elem}>
+              </NavLink>
+            </div>
+            <div className={navhomeStyle.elem}>
+              <NavLink to={'/cart'}>
                 <BiCart />
-              </div>
+              </NavLink>
             </div>
           </div>
-        </nav>
-      </div>
-    </>
+        </div>
+      </nav>
+    </div>
   );
 }
 

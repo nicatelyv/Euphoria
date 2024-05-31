@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import signinStyle from "./signin.module.scss"
 import { Link } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 function Signin() {
   const [inputType, setInputType] = useState('password');
@@ -34,7 +36,7 @@ function Signin() {
         <div className={signinStyle.input}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
             <p>{t("Password")}</p>
-            {inputType === 'password' ? <p style={{ cursor: "pointer" }} onClick={toggleInputType}><i className="fa-regular fa-eye"></i> {t("Show")}</p> : <p style={{ cursor: "pointer" }} onClick={toggleInputType}><i className="fa-regular fa-eye-slash"></i> {t("Hide")}</p>}
+            {inputType === 'password' ? <p style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "5px" }} onClick={toggleInputType}><FaEye /> {t("Show")}</p> : <p style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "5px" }} onClick={toggleInputType}><FaEyeSlash /> {t("Hide")}</p>}
           </div>
           <input type={inputType} />
           <div style={{ width: "100%", textAlign: "end", marginTop: "10px" }}><Link to={"/auth/reset-password"}>{t("Forget your password")}</Link></div>

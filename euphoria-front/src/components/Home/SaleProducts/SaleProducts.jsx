@@ -9,13 +9,13 @@ function SaleProducts() {
     return (
         <div className={style.saleproduct}>
             <div className={style.container}>
-                <div className={style.product} style={{ backgroundImage: "url(/img/saleProduct1.png)" }}>
+                <div className={style.product} style={{ backgroundColor: "#FEC964", backgroundImage: "url(/img/saleProduct1.png)" }}>
                     <h4>{t("Low Price")}</h4>
                     <h2>{t("High Coziness")}</h2>
                     <h5>{t("UPTO 50% OFF")}</h5>
                     <Link to={"/shop"}>{t("Explore Items")}</Link>
                 </div>
-                <div className={style.product} style={{ backgroundImage: "url(/img/saleProduct2.png)" }}>
+                <div className={style.product} style={{ backgroundColor: "#8B6BA4", backgroundImage: "url(/img/saleProduct2.png)" }}>
                     <h4>{t("Beyoung Presents")}</h4>
                     <h2>{t("Breezy Summer Style")}</h2>
                     <h5>{t("UPTO 50% OFF")}</h5>

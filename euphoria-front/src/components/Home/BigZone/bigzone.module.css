@@ -12,7 +12,6 @@
   background-color: #8a33fd;
   border-radius: 10px;
 }
-
 .text {
   display: flex;
   flex-direction: row;
@@ -207,7 +206,6 @@
 }
 
 @media only screen and (max-width: 960px) {
-
   .first,
   .second,
   .third {
@@ -220,7 +218,6 @@
     padding: 15px;
     height: 270px;
     width: 100%;
-
   }
 
   .bigzone6Text {

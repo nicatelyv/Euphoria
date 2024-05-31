@@ -1,19 +1,17 @@
 import React from "react";
 import navStyle from "./navbar.module.scss";
 import Languageoption from "../../components/language dropdown/language-dropdown";
-// Dil deyisimi ucun
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-//
 import { NavLink } from "react-router-dom";
-import "./global.module.scss";
+import "./global.scss";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+
 function AuthNavbar() {
-  // Dil deyisimi ucun
   const { t } = useTranslation();
   const handleClick = (e) => {
     i18next.changeLanguage(e.target.value);
   };
-  //
 
   return (
     <nav>
@@ -21,7 +19,7 @@ function AuthNavbar() {
         <img src="/svg/logo.svg" />
       </NavLink>
       <div className={navStyle.input}>
-        <i class="fa-solid fa-magnifying-glass"></i>
+        <FaMagnifyingGlass style={{ color: "gray" }} />
         <input type="text" placeholder={t("Search")} />
       </div>
       <ul className={navStyle.list}>

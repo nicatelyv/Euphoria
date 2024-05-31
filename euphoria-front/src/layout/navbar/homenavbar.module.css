@@ -3,6 +3,10 @@
   width: 80%;
   margin: auto;
   border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .border {
@@ -11,6 +15,9 @@
   height: 10.1vh;
   position: fixed;
   z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
 }
 
@@ -31,7 +38,7 @@ i {
   font-size: 14px;
 }
 
-input {
+.nav input {
   padding-left: 10px;
   padding-right: 20px;
   border: none;
@@ -54,7 +61,7 @@ input::placeholder {
 }
 
 .list {
-  width: 35%;
+  width: 45%;
   gap: 5px;
 }
 
@@ -62,6 +69,7 @@ input::placeholder {
   font: 500 1.2em sans-serif;
   color: #807d7e;
   font-size: 16px;
+  text-decoration: none;
 }
 
 .active {
@@ -83,22 +91,56 @@ input::placeholder {
   padding: 0 10px;
   background: #f6f6f6;
 }
-
+.elem a {
+  color: #3c4242;
+}
 .resp {
   display: flex;
   flex-direction: row;
   width: 80%;
   justify-content: space-between;
+  align-items: center;
 }
 
 .menu {
   display: none;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 960px) {
   .resp {
-    display: none;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    background-color: white;
+    z-index: 99;
+    transition: top 0.5s ease-in-out;
+  }
+
+  .resp.show {
+    top: 10.1vh;
+  }
+
+  .list {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .input {
+    margin: 10px 0;
+    width: 40%;
+  }
+
+  .elements {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
   }
 
   .menu {

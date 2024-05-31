@@ -8,47 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 function NewArrival() {
   const { t } = useTranslation();
 
-  function SampleNextArrow(props) {
+  function SampleArrow(props) {
     const { className, style, onClick } = props;
     return (
       <div
         className={className}
+        style={{ ...style, display: "block", background: "gray", borderRadius: "100%" }}
         onClick={onClick}
-        style={{
-          ...style,
-          width: "20px",
-          height: "20px",
-          fontSize: "20px",
-          textAlign: "center",
-          position: "absolute",
-          top: "50%",
-          transform: "translate(0, -50%)",
-        }}
-      >
-        <i style={{ color: "black" }} class="fa-solid fa-angle-right"></i>
-      </div>
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        onClick={onClick}
-        style={{
-          ...style,
-          width: "20px",
-          height: "20px",
-          fontSize: "20px",
-          textAlign: "center",
-          position: "absolute",
-          top: "50%",
-          transform: "translate(0, -50%)",
-        }}
-      >
-        <i style={{ color: "black" }} class="fa-solid fa-angle-left"></i>
-      </div>
+      />
     );
   }
 
@@ -59,8 +26,8 @@ function NewArrival() {
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <SampleArrow />,
+    prevArrow: <SampleArrow />,
     responsive: [
       {
         breakpoint: 1024,

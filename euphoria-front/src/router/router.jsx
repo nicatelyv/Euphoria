@@ -5,6 +5,7 @@ import CheckEmail from "../components/Auth/check email/CheckEmail";
 import Verification from "../components/Auth/verification/Verification";
 import Signup from "../components/Auth/sign up/Signup";
 import ResetPassword from "../components/Auth/reset password/ResetPassword";
+import Password from "../components/Auth/CreatePassword/password";
 
 export const Router = createBrowserRouter([
     {
@@ -37,6 +38,7 @@ export const Router = createBrowserRouter([
             },
             {
                 path: "/auth/create-new-password",
+                element: <Password/>
             }
         ]
     },
