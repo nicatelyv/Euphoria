@@ -12,10 +12,39 @@ function NewArrival() {
     const { className, style, onClick } = props;
     return (
       <div
-        className={className}
-        style={{ ...style, display: "block", background: "gray", borderRadius: "100%" }}
-        onClick={onClick}
-      />
+      className={className}
+      style={{ ...style,
+      width: "20px",
+      height: "20px",
+      fontSize: "20px",
+      textAlign: "center",
+      position: "absolute",
+      top: "50%",
+      display: "block",
+      background: "gray",
+      borderRadius: "100%" }}
+      onClick={onClick}
+  />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+      className={className}
+      style={{ ...style,
+      width: "20px",
+      height: "20px",
+      fontSize: "20px",
+      textAlign: "center",
+      position: "absolute",
+      top: "50%",
+      display: "block",
+      background: "gray",
+      borderRadius: "100%" }}
+      onClick={onClick}
+  />
     );
   }
 

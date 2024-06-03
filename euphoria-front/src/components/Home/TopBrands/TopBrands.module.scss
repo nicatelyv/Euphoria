@@ -40,67 +40,90 @@
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .topBrands {
-    &>.topBrandsImg {
-      width: 90%;
-      gap: 10px;
-      display: grid;
+@media only screen and (max-width: 1300px) {
+  .topBrands{
+    &>.topBrandsImg{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .topBrands{
+    &>.topBrandsImg{
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .topBrands {
-    &>.topBrandsImg {
-      width: 90%;
-      gap: 20px;
-      display: grid;
-      grid-template-columns: 1fr;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-      margin-bottom: 40px;
-
-      &>img {
-        height: 13vh;
+@media only screen and (max-width: 960px) {
+  .topBrands{
+    width: 56%;
+    &>.topBrandsText{
+      &>h1{
+          font-size: 28px;
+      }
+      &>p{
+          font-size: 15px;
+      }
+    }
+    &>.topBrandsImg{
+      width: 80%;
+      grid-template-columns: 1fr 1fr;
+      &>img{
+        width: 80%;
       }
     }
   }
 }
 
-@media only screen and (max-width: 558px) {
-  .topBrands {
-    width: 90%;
-
-    &>.topBrandsText {
-      &>h1 {
-        font-size: 30px;
+@media only screen and (max-width: 540px) {
+  .topBrands{
+    &>.topBrandsText{
+      &>h1{
+          font-size: 26px;
       }
-
-      &>p {
-        font-size: 18px;
+      &>p{
+          font-size: 15px;
       }
     }
-
-    &>.topBrandsImg {
-      width: 90%;
-      gap: 20px;
-      display: grid;
+    &>.topBrandsImg{
+      width: 40%;
       grid-template-columns: 1fr;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10px;
-      margin-bottom: 40px;
+    }
+  }
+}
 
-      &>img {
-        height: 13vh;
+@media only screen and (max-width: 412px) {
+  .topBrands{
+    &>.topBrandsText{
+      &>h1{
+          font-size: 23px;
       }
+      &>p{
+          font-size: 12px;
+      }
+    }
+    &>.topBrandsImg{
+      width: 40%;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .topBrands{
+    &>.topBrandsText{
+      &>h1{
+          font-size: 17px;
+      }
+      &>p{
+          font-size: 10px;
+      }
+    }
+    &>.topBrandsImg{
+      width: 40%;
+      grid-template-columns: 1fr;
     }
   }
 }
