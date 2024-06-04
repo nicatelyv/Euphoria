@@ -35,6 +35,20 @@ const data = [
     },
 ]
 
+const getNewWeekDate = () => {
+    const today = new Date();
+    const nextWeek = new Date(today);
+    nextWeek.setDate(today.getDate() + 7);
+
+    const options = {
+        weekday: 'long',
+        // year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    };
+    return nextWeek.toLocaleDateString('en-US', options)
+}
+
 function CheckoutComponent() {
     const { t } = useTranslation();
     const [error, setError] = useState("")
@@ -72,6 +86,7 @@ function CheckoutComponent() {
         }, 4000);
     }
 
+    const deliveryDate = getNewWeekDate();
     return (
         <div className={style.checkout}>
             <div className={style.urlList}>
@@ -225,7 +240,7 @@ function CheckoutComponent() {
                     <div className={style.shippingMethod}>
                         <h2>{t("Shipping Method")}</h2>
                         <div className={style.content}>
-                            <h3>Arrives by Monday, June 7</h3>
+                            <h3>Arrives by {deliveryDate}</h3>
                             <hr />
                             <div>
                                 <h3>{t("Delivery Charges")} <span>${deliveryPrice}.00</span></h3>
