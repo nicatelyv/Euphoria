@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import style from "./style.module.scss"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { useTranslation } from 'react-i18next';
 import { Formik, Field, Form } from 'formik';
 import * as Yup from 'yup';
-
 
 const data = [
     {
@@ -40,6 +39,7 @@ function CheckoutComponent() {
     const { t } = useTranslation();
     const [error, setError] = useState("")
     const [useDifferentShippingAddress, setUseDifferentShippingAddress] = useState(false);
+    const [usePaymentMethod, setUsePaymentMethod] = useState(true);
 
     async function handleSubmit(values) {
         try {
@@ -53,13 +53,25 @@ function CheckoutComponent() {
     let subtotal = 0
     let savingPrice = 0
     let shippingPrice = 0
+    let deliveryPrice = 0
     data.forEach((e) => {
         subtotal += e.count * e.price
         savingPrice += e.count * e.salePrice
         shippingPrice += e.count * e.shipping
+        deliveryPrice += e.count * 1
     })
 
     let total = subtotal - savingPrice - shippingPrice
+
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/confirm-order')
+        setTimeout(() => {
+            navigate("/")
+            window.location.reload(false);
+        }, 4000);
+    }
+
     return (
         <div className={style.checkout}>
             <div className={style.urlList}>
@@ -209,6 +221,89 @@ function CheckoutComponent() {
                             )}
                         </div>
                     </div>
+
+                    <div className={style.shippingMethod}>
+                        <h2>{t("Shipping Method")}</h2>
+                        <div className={style.content}>
+                            <h3>Arrives by Monday, June 7</h3>
+                            <hr />
+                            <div>
+                                <h3>{t("Delivery Charges")} <span>${deliveryPrice}.00</span></h3>
+                                <p>{t("Additional fess may apply")}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className={style.paymentMethod}>
+                        <h2>{t("Payment Method")}</h2>
+                        <p>{t("All transactions are secure and encrypted.")}</p>
+
+                        <div className={style.form}>
+                            <div className={style.radioButtonContainer}>
+                                <label htmlFor="creditCard">
+                                    <input
+                                        type="radio"
+                                        id="creditCard"
+                                        name="paymentMethod"
+                                        value="creditCard"
+                                        checked={usePaymentMethod}
+                                        onChange={() => setUsePaymentMethod(true)}
+                                        className={style.radioButton}
+                                    />{t("Credit Card")}</label>
+                                <p>{t("We accept all major credit cards.")}</p>
+                            </div>
+                            {usePaymentMethod && (
+                                <div className={style.cardDetail}>
+                                    <div className={style.cardType}>
+                                        <img src="/img/CardType/GPay.png" alt="" />
+                                        <img src="/img/CardType/VISA.png" alt="" />
+                                        <img src="/img/CardType/PayPal.png" alt="" />
+                                        <img src="/img/CardType/PayPass.png" alt="" />
+                                    </div>
+
+                                    <div className={style.cardForm}>
+                                        <div className={style.inps}>
+                                            <input type="number" placeholder='Card number' />
+                                            <input type="text" placeholder='Name of card' />
+                                        </div>
+                                        <div className={style.inps}>
+                                            <input type="date" placeholder='Expiration date (MM/YY)' />
+                                            <input type="number" placeholder='Security Code' />
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
+                            <hr />
+                            <div className={style.radioButtonContainer}>
+                                <label htmlFor="cashOnDelivery">
+                                    <input
+                                        type="radio"
+                                        id="cashOnDelivery"
+                                        name="paymentMethod"
+                                        value="cashOnDelivery"
+                                        checked={!usePaymentMethod}
+                                        onChange={() => setUsePaymentMethod(false)}
+                                        className={style.radioButton}
+                                    /> {t("Cash on delivery")}</label>
+                                <p>{t("Pay with cash upon delivery.")}</p>
+                            </div>
+                            <hr />
+                            <div className={style.radioButtonContainer}>
+                                <label htmlFor="paypal">
+                                    <input
+                                        type="radio"
+                                        id="paypal"
+                                        name="paymentMethod"
+                                        value="paypal"
+                                        checked={!usePaymentMethod}
+                                        onChange={() => setUsePaymentMethod(false)}
+                                        className={style.radioButton}
+                                    /> {t("PayPal")}</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onClick={handleClick}>{t("Pay Now")}</button>
                 </div>
 
                 <div className={style.orderSummary}>

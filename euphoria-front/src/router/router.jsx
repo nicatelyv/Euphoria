@@ -7,6 +7,7 @@ import Signup from "../components/Auth/sign up/Signup";
 import ResetPassword from "../components/Auth/reset password/ResetPassword";
 import Password from "../components/Auth/CreatePassword/password";
 import ProductList from "../pages/ProductList/ProductList";
+import Confirm from "../pages/ConfirmOrder/Confirm";
 
 export const Router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ export const Router = createBrowserRouter([
         element: <Checkout />
       }
     ]
+  },
+  {
+    path: "/confirm-order",
+    element: <Confirm />
   },
   {
     path: "/product list",

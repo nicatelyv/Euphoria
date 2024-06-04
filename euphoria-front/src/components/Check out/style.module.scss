@@ -25,6 +25,10 @@
         padding: 40px;
     }
 
+    @include mobile {
+        padding: 20px;
+    }
+
     .urlList {
         display: flex;
         align-items: center;
@@ -94,11 +98,19 @@
                     justify-content: space-between;
                     overflow: hidden;
 
+                    @include mobile {
+                        flex-direction: column;
+                    }
+
                     &>#left {
                         display: flex;
                         flex-direction: column;
                         width: 48%;
                         gap: 5px;
+
+                        @include mobile {
+                            width: 100% !important;
+                        }
 
                         &>label {
                             font-size: 16px;
@@ -123,6 +135,16 @@
                         &>input::placeholder {
                             font-size: 12px;
                         }
+
+                        &>input::-webkit-outer-spin-button,
+                        &>input::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                            margin: 0;
+                        }
+
+                        &>input[type=number] {
+                            -moz-appearance: textfield;
+                        }
                     }
 
                     &>#right {
@@ -130,6 +152,10 @@
                         display: flex;
                         flex-direction: column;
                         gap: 5px;
+
+                        @include mobile {
+                            width: 100% !important;
+                        }
 
                         &>label {
                             font-size: 16px;
@@ -160,6 +186,10 @@
                         display: flex;
                         flex-direction: column;
                         width: 200px;
+
+                        @include mobile {
+                            width: 100%;
+                        }
 
                         &>label {
                             font-size: 16px;
@@ -264,10 +294,11 @@
                 }
             }
 
-            &>.shippingAddress {
+            &>.shippingAddress,
+            &>.paymentMethod {
                 border-top: 1px solid #c5c4c5;
                 width: 100%;
-                min-height: 20vh;
+                min-height: 10vh;
                 margin-top: 50px;
                 display: flex;
                 flex-direction: column;
@@ -289,8 +320,18 @@
                     background-color: #f6f6f6;
                     margin-top: 30px;
 
+                    @include mobile {
+                        padding: 20px;
+                    }
+
                     &>.radioButtonContainer {
                         display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+
+                        &>p {
+                            margin-left: 42px;
+                        }
 
                         &>label {
                             display: flex;
@@ -299,6 +340,10 @@
                             cursor: pointer;
                             font-weight: 600;
                             font-size: 20px;
+
+                            @include mobile {
+                                font-size: 14px;
+                            }
 
                             &>input[type='radio']:after {
                                 width: 18px;
@@ -337,6 +382,10 @@
 
                         &>.inputLabel {
                             font-size: 16px;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
                         }
 
                         &>.inputField {
@@ -347,6 +396,146 @@
                             outline: none;
                         }
 
+                    }
+
+                    //Payment Method
+                    &>.cardDetail {
+                        display: flex;
+                        flex-direction: column;
+                        width: 90%;
+                        min-height: 10vh;
+                        margin-left: 42px;
+                        gap: 40px;
+
+                        @include mobile {
+                            width: 100%;
+                            margin: 0;
+                        }
+
+                        &>.cardType {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            gap: 30px;
+
+                            @include mobile {
+                                gap: 10px;
+                                flex-wrap: wrap;
+                            }
+                        }
+
+                        &>.cardForm {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            gap: 30px;
+
+                            &>.inps {
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                gap: 30px;
+
+                                @include mobile {
+                                    flex-direction: column;
+                                }
+
+                                &>input {
+                                    width: 50%;
+                                    height: 50px;
+                                    outline: none;
+                                    border: 1px solid black;
+                                    border-radius: 10px;
+                                    padding-left: 20px;
+                                    padding-right: 20px;
+                                    font-size: 14px;
+
+                                    @include mobile {
+                                        width: 100%;
+                                    }
+                                }
+
+                                &>input::placeholder {
+                                    font-size: 14px;
+                                }
+
+                                &>input::-webkit-outer-spin-button,
+                                &>input::-webkit-inner-spin-button {
+                                    -webkit-appearance: none;
+                                    margin: 0;
+                                }
+
+                                &>input[type=number] {
+                                    -moz-appearance: textfield;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &>.shippingMethod {
+                border-top: 1px solid #c5c4c5;
+                width: 100%;
+                min-height: 10vh;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                &>h2 {
+                    margin-top: 40px;
+                    font-size: 22px;
+                }
+
+                &>.content {
+                    width: 100%;
+                    padding: 40px;
+                    border-radius: 8px;
+                    background-color: '#f9f9f9';
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    background-color: #f6f6f6;
+                    margin-top: 30px;
+
+                    @include mobile {
+                        padding: 20px;
+                    }
+
+                    &>h3 {
+                        font-size: 20px;
+
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+
+                    &>div {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+                        &>h3 {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            font-size: 20px;
+
+                            @include mobile {
+                                font-size: 14px;
+                            }
+                        }
+
+                        &>p {
+                            margin-top: 10px;
+                            font-size: 16px;
+
+                            @include mobile {
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
             }
