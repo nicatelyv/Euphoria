@@ -50,7 +50,7 @@ const Password = () => {
               />
                
             </div>
-            <button type="submit">Reset Password</button> 
+            <button className={styles.reset_password} type="submit">Reset Password</button> 
           </form>
         </div>
       </div>

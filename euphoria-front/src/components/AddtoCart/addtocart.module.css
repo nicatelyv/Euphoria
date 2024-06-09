@@ -1,0 +1,165 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.Addtocart {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 13vh !important;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
+  overflow: hidden;
+}
+.links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #807d7e;
+  font: 500 1.3em sans-serif;
+}
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 20px 0;
+}
+.black {
+  background-color: #3c4242;
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+}
+.productHeader {
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  justify-content: space-between;
+}
+.productRow {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.right {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.cursor {
+  cursor: pointer;
+}
+.quantity {
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  padding: 2px 15px;
+  gap: 10px;
+  align-items: center;
+}
+.left {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+}
+.productImage {
+  width: 80px;
+  height: auto;
+}
+.productInfo {
+  flex: 1;
+  padding-left: 20px;
+}
+.price,
+.quantity,
+.shipping,
+.subtotal {
+  text-align: center;
+}
+.name {
+  color: #3c4242;
+  font: 700 0.8em sans-serif;
+}
+.text {
+  color: #807d7e;
+  font: 600 0.7em sans-serif;
+}
+.shopping {
+  background-color: #f6f6f6;
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.discount p {
+  margin-top: 20px;
+  color: #3c4242;
+  font: 700 1.3em sans-serif;
+}
+.discount span {
+  color: #807d7e;
+  font: 400 0.9em sans-serif;
+}
+.inputBox {
+  margin-bottom: 30px;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.inputBox input {
+  border-radius: 8px 0 0 8px;
+  padding: 10px;
+  border: 1px solid #3c4242;
+  outline: none;
+}
+
+.discount a {
+  color: #3c4242;
+  border: 1px solid #807d7e;
+  padding: 8px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.8em;
+  background-color: #fff;
+}
+@media only screen and (max-width: 660px) {
+  .black {
+    display: none;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .productHeader span {
+    font-size: 0.8em;
+  }
+  .details {
+    width: 60%;
+  }
+  .productRow {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .left {
+    width: 30%;
+  }
+  .right {
+    width: 70%;
+  }
+}

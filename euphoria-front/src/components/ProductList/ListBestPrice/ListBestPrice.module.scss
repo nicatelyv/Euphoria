@@ -7,34 +7,89 @@
 :root {
   --color-charcoalGrey: #3c4242;
   --color-white: #fff;
+  --color-whiteSmoke: #f6f6f6;
   --color-aztecPurple: #8a33fd;
   --color-mediumGrey: #807d7e;
+  --color-cottonSeed: #bebcbd;
 }
-.container{
-    width: 100%;
-    height: 1000px;
+.container {
+  width: 100%;
+  height: auto;
+  margin: 80px 0px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > .row {
+    width: 80%;
+    height: 90%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: yellowgreen;
-    &>.row{
-        width: 80%;
-        height: 80%;
-        background: pink;
-        &>.tcol{
-            width: 100%;
-            height: 30px;
-            display: flex;
-            background-color: yellow;
-            & > .line {
-                width: 6px;
-                height: 100%;
-                border-radius: 10px;
-                background-color: var(--color-aztecPurple);
-              }
-              &> h2{
-                color: var(--color-charcoalGrey);
-              }
-        }
+    align-items: flex-end;
+    gap: 20px;
+    flex-direction: column;
+    & > .tcol {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      margin-bottom:40px;
+      gap: 5px;
+      & > .line {
+        width: 6px;
+        height: 30px;
+        border-radius: 10px;
+        background-color: var(--color-aztecPurple);
+      }
+      & > h2 {
+        font-size: 28px;
+        color: var(--color-charcoalGrey);
+      }
     }
+    & > .bodyCol {
+      width: 95%;
+      height: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      border-radius: 12px;
+      background-color: var(--color-whiteSmoke);
+      & > table {
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.02em;
+        text-align: left;
+        border-collapse: collapse;
+        & > thead {
+          border-bottom: 1px solid var(--color-cottonSeed);
+          color: var(--color-charcoalGrey);
+          & > tr > td,
+          th {
+            height: 110px;
+            padding: 8px 60px;
+            box-sizing: border-box;
+          }
+          & > tr > th:last-child {
+            border-left: 1px solid var(--color-cottonSeed);
+            color: var(--color-charcoalGrey);
+          }
+        }
+        & > tbody {
+          color: var(--color-mediumGrey);
+          & > tr {
+            height: 90px;
+            & > td {
+              padding: 8px 60px;
+            }
+            & > td:last-child {
+              border-left: 1px solid var(--color-cottonSeed);
+            }
+          }
+        }
+      }
+    }
+  }
 }

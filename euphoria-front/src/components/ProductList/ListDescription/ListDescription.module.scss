@@ -47,7 +47,8 @@
       }
     }
     & > .BodyCol {
-      width: 100%;
+      width: 97.5%;
+      margin: auto;
       height: 85%;
       // background-color: red;
       display: flex;
@@ -65,21 +66,13 @@
         display: flex;
         gap: 10px;
         flex-direction: column;
-        & > .title {
+        & > .title , .subtitle{
           font-size: 20px;
-          font-weight: 600;
           line-height: 33.5px;
           letter-spacing: 0.02em;
           color: var(--color-mediumGrey);
-        }
-        & > .subtitle {
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 33.5px;
-          letter-spacing: 0.02em;
-          color: rgba(128, 125, 126, 1);
           &>span{
-            font-weight: 700;
+            font-weight: 700 !important;
           }
         }
       }

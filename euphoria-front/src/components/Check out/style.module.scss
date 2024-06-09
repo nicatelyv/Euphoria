@@ -277,6 +277,7 @@
                     width: 220px;
                     height: 50px;
                     background: none;
+                    border: none;
                     border-radius: 10px;
                     font-size: 15px;
                     cursor: pointer;
@@ -538,6 +539,27 @@
                         }
                     }
                 }
+            }
+
+            #submitbtn {
+                width: 140px;
+                height: 50px;
+                background: none;
+                border: none;
+                border-radius: 10px;
+                font-size: 15px;
+                cursor: pointer;
+                background-color: #8A33FD;
+                color: white;
+                transition: .5s;
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-top: 40px;
+            }
+
+            #submitbtn:hover {
+                transition: .5s;
+                letter-spacing: 1px;
             }
         }
 

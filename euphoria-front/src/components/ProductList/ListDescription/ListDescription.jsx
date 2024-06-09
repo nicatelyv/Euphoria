@@ -10,7 +10,7 @@ function ListDescription() {
       <div className={listDescriptionStyle.row}>
         <div className={listDescriptionStyle.tCol}>
           <div className={listDescriptionStyle.line}></div>
-          <h1 className={listDescriptionStyle.title}>
+          <h1 className={listDescriptionStyle.title}> 
             {t("Clothing for Women Online in India")}
           </h1>
         </div>
