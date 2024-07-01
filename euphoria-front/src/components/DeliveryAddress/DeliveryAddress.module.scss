@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --color-charcoalGrey: #3c4242;
+  --color-white: #fff;
+  --color-whiteSmoke: #f6f6f6;
+  --color-aztecPurple: #8a33fd;
+  --color-blueViolet: #8434e1;
+  --color-mediumGrey: #807d7e;
+  --color-cottonSeed: #bebcbd;
+}
+
+.container {
+  width: 100%;
+  //   background-color: pink;
+  position: relative;
+  top: 20vh;
+    height: 1250px;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  & > .titlecontainer {
+    color: var(--color-charcoalGrey);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    & > .title {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    & > .subtitle {
+      font-size: 22px;
+    }
+  }
+  & > .maincontainer {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    // justify-content: space-betwee;
+    // background-color: red;
+    // height: 950px;
+
+    & > .adressList {
+      width: 100%;
+      height: 800px;
+      display: flex;
+      .invalid {
+        border: 1px solid red;
+      }
+      flex-direction: column;
+      gap: 30px;
+      & > .listItem {
+        width: 100%;
+        // background-color: yellowgreen;
+        height: 90px;
+        & > .listContainers {
+          width: 98%;
+          // height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+          & > p {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: var(--color-charcoalGrey);
+          }
+          & > .txt {
+            width: 100%;
+            height: 150px !important;
+            border-radius: 8px;
+            border: none;
+            padding: 17px;
+            background: var(--color-whiteSmoke);
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--color-mediumGrey);
+          }
+          &>.txt:focus-visible{
+           outline-color: var(--color-aztecPurple);
+        }
+        }
+        & > .listContainer {
+          height: 100%;
+          display: flex;
+          gap: 30px;
+          & > .left,
+          .right {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            & > input {
+              width: 95%;
+              height: 54px;
+              background: var(--color-whiteSmoke);
+              border: none;
+              border-radius: 8px;
+              padding: 17px;
+            }
+            & > input::placeholder {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--color-mediumGrey);
+            }
+            & > input:focus-visible {
+              outline-color: var(--color-aztecPurple);
+            }
+            & > select {
+              width: 95%;
+              height: 54px;
+              border: none;
+              border-radius: 8px;
+              padding: 17px;
+              font-size: 16px;
+              font-weight: 400;
+              background: var(--color-whiteSmoke);
+              color: var(--color-mediumGrey);
+            }
+            & > select:focus-visible {
+              outline-color: var(--color-aztecPurple);
+            }
+            & > p {
+              font-size: 18px;
+              font-weight: 600;
+              letter-spacing: 0.02em;
+              color: var(--color-charcoalGrey);
+            }
+          }
+        }
+      }
+    }
+    & > .chechkbox {
+    //   width: 100%;
+        height: 100px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    //   background-color: red;
+      & > .chck {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        & > input {
+          accent-color: #8a33fd;
+          scale: 1.2;
+          width: 15px;
+          cursor: pointer;
+          height: 15px;
+          border: 4px solid var(--color-cottonSeed) !important;
+          background-color: transparent !important;
+        }
+        & > p {
+          font-size: 20.09px;
+          font-weight: 400;
+          color: var(--color-charcoalGrey);
+        }
+      }
+    }
+    & > .buttons {
+      & > button {
+        width: 150px;
+        height: 48px;
+        cursor: pointer;
+        margin-right: 30px;
+        border-style: none;
+        // padding: 12px 40px !important;
+        border-radius: 8px;
+        font-size: 20.09px;
+      }
+      & > .btnSave {
+        font-weight: 600;
+        background-color: var(--color-aztecPurple);
+        color: var(--color-white);
+      }
+      &>.btnSave:hover{
+        color: var(--color-whiteSmoke);
+        background-color: var(--color-blueViolet);
+        scale: 1.1;
+        transition: .5s;
+      }
+      & > .btnCancel {
+        background: var(--color-whiteSmoke);
+        color: var(--color-mediumGrey);
+        font-weight: 700;
+      }
+      &>.btnCancel:hover{
+        color: var(--color-white);
+        background-color: var(--color-cottonSeed);
+        scale: 1.1;
+        transition: .5s;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width:576px){
+    .container{
+        // height: 1500px;
+        &>.maincontainer{
+            &>.adressList{
+                height: auto;
+                gap: 40px;
+                &>.listItem{
+                  height: 190px;
+                  &>.listContainer{
+                    flex-direction: column;
+                    &>.left,.right{
+                        width: 100%;
+                        gap: 10px;
+                    }
+                  }
+                }
+            }
+            &>.chechkbox{
+                &>.chck{
+                    &>p{
+                        font-size: 16px !important;
+                    }
+                }
+            }
+            &>.buttons{
+                display: flex;
+    flex-direction: column;
+    gap: 15px;
+            }
+        }
+    }
+}

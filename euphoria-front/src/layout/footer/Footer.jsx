@@ -1,11 +1,11 @@
 import footerStyle from './footer.module.scss'
-import footergp from '../../../public/img/footergp.png'
-import footeras from '../../../public/img/footeras.png'
-import footerfbicon from '../../../public/img/footerfbicon.png'
-import footerigicon from '../../../public/img/footerigicon.png'
-import footertwicon from '../../../public/img/footertwicon.png'
-import footerinicon from '../../../public/img/footerinicon.png'
-import footericon from '../../../public/img/footericon.png'
+import footergp from '/img/footergp.png'
+import footeras from '/img/footeras.png'
+import footerfbicon from '/img/footerfbicon.png'
+import footerigicon from '/img/footerigicon.png'
+import footertwicon from '/img/footertwicon.png'
+import footerinicon from '/img/footerinicon.png'
+import footericon from '/img/footericon.png'
 import { useTranslation } from 'react-i18next'
 
 function Footer() {

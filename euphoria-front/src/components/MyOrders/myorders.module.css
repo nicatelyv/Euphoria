@@ -1,0 +1,112 @@
+.ordersContainer {
+  width: 90%;
+  margin: 20vh 90px 0 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 90px;
+  margin-top: 40px;
+}
+.border {
+  border-bottom: 3px solid #f6f6f6;
+}
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font: 500 1.2em sans-serif;
+}
+
+.tabActive {
+  background-color: #f6f6f6;
+  border-bottom: 3px solid #000;
+  border-radius: 8px 8px 0 0;
+}
+
+.ordersList {
+  list-style: none;
+  padding: 0;
+}
+
+.orderItem {
+  margin-top: 10px;
+}
+.gray {
+  background-color: #f6f6f6;
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+.number {
+  font: 600 1.2em sans-serif;
+  color: #3c4242;
+}
+.firstRow,
+.secondRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.boldText {
+  color: #3c4242;
+  font: 500 0.95em sans-serif;
+}
+.normalText {
+  color: #798686;
+  font: 500 0.95em sans-serif;
+}
+.img {
+  width: 130px;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  width: 50vw;
+}
+.itemIndex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.itemName {
+  color: #3c4242;
+  font: 500 1em sans-serif;
+}
+.itemIndex a {
+  text-decoration: none;
+  background-color: #8a33fd;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: 40px;
+  width: 130px;
+  margin: 20px 30px;
+  text-align: center;
+  font: 500 1em sans-serif;
+}
+.otemText {
+  display: "flex";
+  flex-direction: row;
+}
+.orderButton {
+  background-color: #8a33fd;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  height: 40px;
+  width: 130px;
+  margin: 20px 30px;
+  text-align: center;
+  font: 500 1em sans-serif;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+@media only screen and (max-width: 815px) {
+  .itemIndex a {
+    width: 30%;
+  }
+}

@@ -9,13 +9,21 @@ import Password from "../components/Auth/CreatePassword/password";
 import ProductList from "../pages/ProductList/ProductList";
 import Confirm from "../pages/ConfirmOrder/Confirm";
 import AddtoCart from "../pages/AddToCart/AddToCart";
+import { MyAccount } from "../pages/MyAccount/MyAccount";
+import Wishlist from "../components/Wishlist/Wishlist";
+import EmptyCart from "../pages/EmptyCart/EmptyCart";
+import PersonalInfo from "../components/PersonalInfo/PersonalInfo";
+import Myorders from "../components/MyOrders/Myorders";
+import OrderDetails from "../components/OrderDetails/OrderDetails";
+import DeliveryAddress from "../components/DeliveryAddress/DeliveryAddress";
+import NotFound from "../components/NotFound/NotFound";
 
 export const Router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
   },
-  {
+  localStorage.getItem("access_token") ? <></> : {
     path: "/auth",
     element: <Auth />,
     children: [
@@ -45,6 +53,35 @@ export const Router = createBrowserRouter([
       },
     ],
   },
+  localStorage.getItem("access_token") ? {
+    path: "/my-account",
+    element: <MyAccount />,
+    children: [
+      {
+        path: "/my-account/wishlist",
+        element: <Wishlist />,
+      },
+      {
+        path: "/my-account/my-orders",
+        element: <Myorders />,
+      },
+      {
+        path: "/my-account/my-orders/order-details",
+        element: <OrderDetails />,
+      },
+      {
+        path: "/my-account/personal-info",
+        element: <PersonalInfo />,
+      },
+      {
+        path: "/my-account/sign-out",
+      },
+      {
+        path: "/my-account/my-info",
+        element: <DeliveryAddress />,
+      },
+    ],
+  } : <></>,
   {
     path: "/women",
     element: <Women />,
@@ -72,5 +109,13 @@ export const Router = createBrowserRouter([
   {
     path: "/addtocart",
     element: <AddtoCart />,
+  },
+  {
+    path: "/empty-cart",
+    element: <EmptyCart />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);

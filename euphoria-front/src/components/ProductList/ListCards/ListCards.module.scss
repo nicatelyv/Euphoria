@@ -9,74 +9,50 @@
   --color-white: #fff;
   --color-whiteSmoke: #f6f6f6;
   --color-aztecPurple: #8a33fd;
-    --color-mediumGrey: #807d7e;
+  --color-black: #000;
+  --color-monsoon:#8A8989;
+  --color-reddishOrange: #f35528;
+  --color-halloweenOrange: #f16f2b;
+  --color-ultramarineBlue: #345eff;
+  --color-rawSienna: #d67e3b;
+  --color-leafyGreen: #48bc4e;
+  --color-saffronMango: #fdc761;
+  --color-mercury: #e4e5e8;
+  --color-ruddyPink: #e08d9d;
+  --color-blueDiamond: #3fdeff;
+  --color-blueViolet: #8434e1;
+  --color-mediumGrey: #807d7e;
   --color-cottonSeed: #bebcbd;
   --color-charcoalGrey: #3f4646;
 }
 
 .container {
   width: 100%;
+  position: relative;
+  top: 10vh;
   height: 1900px;
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding-top: 80px;
   & > .row {
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    // background-color: yellow;
-    & > .lCol {
-      width: 23%;
-      height: 70%;
-      border-radius: 0px 0px 2px 2px;
-      border: 0.5px;
-      border-style: none solid solid solid;
-      border-color: var(--color-cottonSeed);
-      & > .filter {
-        height: 60px;
-        border-bottom: 0.5px solid var(--color-cottonSeed);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        & > p {
-          font-size: 22px;
-          font-weight: 500;
-          letter-spacing: 0.02em;
-          color: var(--color-mediumGrey);
-
-        }
-        &>.lists{
-          width: 100%;
-          &>li{
-            width: 100%;
-            height: 30px;
-            background-color: pink;
-            &>div{
-              padding: 20px !important;
-            }
-          }
-        }
-      }
-    }
+    
     & > .rCol {
       width: 77%;
       margin-top: 40px;
-      //   height: 80%;
       display: flex;
       flex-direction: column;
-      //   background-color: pink;
       & > .headCol {
-        width: 95%;
+        width: 90%;
         height: 40px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: auto;
-        // background-color: aqua;
         margin-bottom: 30px;
         & > h6 {
           font-size: 22px;
@@ -97,20 +73,33 @@
         }
       }
       & > .cards {
-        width: 95%;
-        height: 85%;
+        width: 90%;
+        // height: 85%;
         margin: auto;
         display: flex;
-        // gap: 15px;
         justify-content: space-between;
         flex-wrap: wrap;
         & > .card {
           color: var(--color-charcoalGrey);
-
-          width: 282px;
+          position: relative;
+          width: 30%;
           height: 450px;
           border-radius: 12px;
-          //   background-color: yellow;
+          &>.heart{
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            &>img{
+              object-fit: cover;
+            }
+          }
           & > img {
             width: 100%;
             object-fit: contain;
@@ -148,3 +137,39 @@
     }
   }
 }
+
+
+@media only screen and (max-width: 1200px) {
+  .container>{
+    height: auto;
+&>.row{
+  &>.rCol{
+    width: 100%;
+    >.cards{
+      &>.card{
+        width: 35%;
+        height: 350px !important;
+      }
+    }
+    }
+  }
+}
+  }
+
+  
+@media only screen and (max-width: 986px) {
+  .container>{
+    height: auto;
+&>.row{
+  &>.rCol{
+    width: 100%;
+  &>.cards{
+    &>.card{
+      height: 350px;
+    }
+  }
+    }
+  }
+}
+  }
+

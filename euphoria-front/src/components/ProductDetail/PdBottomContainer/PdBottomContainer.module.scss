@@ -1,0 +1,109 @@
+.pdBottomContainer {
+  width: 100%;
+  min-height: 160vh;
+  padding: 0 100px;
+  & > .pdh2holder {
+    width: 80%;
+    height: 10vh;
+    display: flex;
+    gap: 15px;
+    & > .pdSimilarProddiv {
+      background-color: #8A33FD;
+      width: 6px;
+      height: 5vh;
+      border-radius: 10px;
+    }
+  }
+  & > .pdproductscontainer {
+    min-width: 100%;
+    min-height: 130vh; 
+    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    // & > .pdproductcard {
+    //   & > .pdcardimg {
+    //     position: relative;
+    //     & > img {
+    //       width: 100%;
+    //       height: 50vh;
+    //     }
+    //     & > .pdwishicon {
+    //       position: absolute;
+    //       top: 25px;
+    //       right: 15px;
+    //       width: 25px;
+    //       height: 25px;
+    //       background-color: white;
+    //       border-radius: 50%;
+    //       display: flex;
+    //       justify-content: center;
+    //       align-items: center;
+    //     }
+    //   }
+    //   & > .pdcardtext {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     gap: 10px;
+    //     margin-top: 15px;
+    //   }
+    // }
+  }
+}
+
+@media only screen and (max-width: 949px) {
+  .pdBottomContainer {
+    & > .pdproductscontainer {
+      width: 100%;
+      margin-bottom: 25px;
+      gap: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@media only screen and (max-width: 681px) {
+  .pdBottomContainer {
+    & > .pdh2holder {
+      width: 80%;
+      & > .pdSimilarProddiv {
+        background-color: #8a33fd;
+        height: 5vh;
+        border-radius: 10px;
+      }
+    }
+    & > .pdproductscontainer {
+      width: 100%;
+      margin-bottom: 25px;
+      gap: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 575px) {
+  .pdBottomContainer {
+    & > .pdh2holder {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 30px;
+      & > .pdSimilarProddiv {
+        background-color: #8a33fd;
+        height: 5vh;
+        border-radius: 10px;
+      }
+    }
+    & > .pdproductscontainer {
+      width: 100%;
+      margin-bottom: 25px;
+      gap: 40px;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}

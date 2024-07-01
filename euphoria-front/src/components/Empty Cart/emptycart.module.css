@@ -1,0 +1,26 @@
+.empty {
+  padding: 15vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.empty p {
+  color: #807d7e;
+  padding: 20px 0;
+}
+
+.emptyButton {
+  background-color: #8a33fd;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 8px 0;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.emptyButton:hover {
+  background-color: #7029cc;
+}

@@ -1,0 +1,93 @@
+.perIncontainer{
+    width: 70%;
+    min-height: 100vh;
+    padding: 130px 0;
+    margin-left: 40px;
+    &>form{
+        width: 100%;
+        min-height: 70vh;
+        margin-left: 0;
+        padding-left: 0;
+        &>div{
+            width: 90%;
+            height: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #EDEEF2;
+            padding-bottom: 10px;
+            &>input{
+                border: none;
+            }
+        }
+    }
+    &>.addressadding{
+        width: 100%;
+        min-height: 30vh;
+        margin-top: 30px;
+        &>.addressaddingheader{
+            width: 90%;
+            height: 40px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &>.addressaddingboxes{
+            width: 90%;
+            min-height: 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            &>div{
+                background-color: #F6F6F6;  
+                display: flex;
+                flex-direction: column; 
+                gap: 17px;          
+                border-radius: 12px;   
+                padding: 20px 30px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    .adresboxbtn{
+        &>button:first-child{
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 473px) {
+    .perIncontainer{
+        &>.addressadding{
+            width: 100%;
+            min-height: 30vh;
+            margin-top: 30px;
+            &>.addressaddingheader{
+                width: 90%;
+                height: 40px;
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            &>.addressaddingboxes{
+                width: 90%;
+                min-height: 70px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 20px;
+                &>div{
+                    background-color: #F6F6F6;  
+                    display: flex;
+                    flex-direction: column; 
+                    gap: 17px;          
+                    border-radius: 12px;   
+                    padding: 20px 30px;
+                }
+            }
+        }
+    }
+}

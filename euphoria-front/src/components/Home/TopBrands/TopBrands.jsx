@@ -1,10 +1,10 @@
 import React from 'react'
 import topBrandsStyle from './TopBrands.module.scss'
-import nike from '../../../../public/img/nike (2).png'
-import hm from '../../../../public/img/hm.png'
-import levis from '../../../../public/img/levis.png'
-import uspolo from '../../../../public/img/uspolo.png'
-import puma from '../../../../public/img/puma.png'
+import nike from '/img/nike (2).png'
+import hm from '/img/hm.png'
+import levis from '/img/levis.png'
+import uspolo from '/img/uspolo.png'
+import puma from '/img/puma.png'
 import { useTranslation } from 'react-i18next'
 
 const TopBrands = () => {
